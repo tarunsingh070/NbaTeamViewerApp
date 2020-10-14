@@ -64,6 +64,11 @@ class TeamsSharedViewModel : ViewModel(), KoinComponent {
     }
 
     /**
+     * Gets the currently selected team.
+     */
+    fun getSelectedTeam(): MutableLiveData<Team> = selectedTeam
+
+    /**
      * Handles the event when user selects a sort by option for teams list.
      *
      * @param position The position of the sorting option selected.

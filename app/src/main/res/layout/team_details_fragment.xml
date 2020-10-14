@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.teamDetails.TeamDetailsFragment">
+
+    <TextView
+        android:id="@+id/team_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        tools:text="Team Details Screen" />
+
+    <TextView
+        android:id="@+id/team_wins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/team_name"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp"
+        tools:text="Wins : 20" />
+
+    <TextView
+        android:id="@+id/team_losses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/team_name"
+        android:layout_alignParentEnd="true"
+        android:textSize="20sp"
+        tools:text="Losses : 20" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/players_roster_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/team_wins"
+        android:layout_marginTop="16dp"
+        tools:listitem="@layout/item_player"/>
+
+</RelativeLayout>

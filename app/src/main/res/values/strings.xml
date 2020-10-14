@@ -4,6 +4,7 @@
     <!--NBA Teams List Screen-->
     <string name="wins_count">Wins : %d</string>
     <string name="losses_count">Losses : %d</string>
+    <string name="full_name">%s %s</string>
     <string name="error_fetching_teams_message">Error fetching NBA teams. Please try again later.</string>
     <string name="sort_by_menu_option_title">Sort by</string>
     <string-array name="team_sort_by">
@@ -11,6 +12,11 @@
         <item>Wins</item>
         <item>Losses</item>
     </string-array>
+
+    <!--NBA Team Details Screen-->
+    <string name="player_label">Player Name</string>
+    <string name="number_label">Number</string>
+    <string name="position_label">Position</string>
 
     <string name="no_results">No results :(</string>
 </resources>
