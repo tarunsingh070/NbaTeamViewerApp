@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nba_team_viewer_graph"
+    app:startDestination="@id/teamsListFragment">
+    <fragment
+        android:id="@+id/teamsListFragment"
+        android:name="com.tarun.nbateamviewerapp.ui.teamsList.TeamsListFragment"
+        android:label="TeamsListFragment" >
+        <action
+            android:id="@+id/action_teamsListFragment_to_TeamDetailsFragment"
+            app:destination="@id/TeamDetailsFragment" />
+    </fragment>
+    <fragment android:id="@+id/TeamDetailsFragment" />
+</navigation>

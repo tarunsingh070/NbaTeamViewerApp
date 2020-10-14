@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">NbaTeamViewerApp</string>
+
+    <!--NBA Teams List Screen-->
+    <string name="wins_count">Wins : %d</string>
+    <string name="losses_count">Losses : %d</string>
+    <string name="error_fetching_teams_message">Error fetching NBA teams. Please try again later.</string>
+
+    <string name="no_results">No results :(</string>
 </resources>

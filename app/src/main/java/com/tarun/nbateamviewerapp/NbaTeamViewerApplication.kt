@@ -1,8 +1,10 @@
 package com.tarun.nbateamviewerapp
 
 import android.app.Application
+import com.tarun.nbateamviewerapp.di.adapterModule
 import com.tarun.nbateamviewerapp.di.helperModule
 import com.tarun.nbateamviewerapp.di.networkModule
+import com.tarun.nbateamviewerapp.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -20,7 +22,7 @@ class NbaTeamViewerApplication : Application() {
         startKoin {
             androidLogger()
             androidContext(this@NbaTeamViewerApplication)
-            modules(helperModule, networkModule)
+            modules(helperModule, networkModule, viewModelModule, adapterModule)
         }
     }
 }

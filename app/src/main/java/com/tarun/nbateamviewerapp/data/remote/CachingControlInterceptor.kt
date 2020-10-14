@@ -1,7 +1,7 @@
 package com.tarun.nbateamviewerapp.data.remote
 
 import android.content.Context
-import com.tarun.nbateamviewerapp.ui.isNetworkAvailable
+import com.tarun.nbateamviewerapp.ui.extensions.isNetworkAvailable
 import okhttp3.Interceptor
 import okhttp3.Request
 import okhttp3.Response

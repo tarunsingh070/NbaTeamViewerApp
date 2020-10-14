@@ -1,4 +1,4 @@
-package com.tarun.nbateamviewerapp.ui
+package com.tarun.nbateamviewerapp.ui.extensions
 
 import android.content.Context
 import android.net.ConnectivityManager
