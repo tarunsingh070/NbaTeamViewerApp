@@ -1,8 +1,9 @@
-package com.tarun.nbateamviewerapp.ui
+package com.tarun.nbateamviewerapp.ui.teamsActivity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.tarun.nbateamviewerapp.databinding.ActivityTeamsBinding
+import com.tarun.nbateamviewerapp.ui.viewModels.TeamsSharedViewModel
 import com.tarun.nbateamviewerapp.ui.extensions.displayLongToast
 import com.tarun.nbateamviewerapp.ui.extensions.setVisibility
 import org.koin.androidx.viewmodel.ext.android.viewModel

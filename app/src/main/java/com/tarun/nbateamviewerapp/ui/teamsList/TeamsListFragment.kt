@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.tarun.nbateamviewerapp.R
 import com.tarun.nbateamviewerapp.data.model.Team
 import com.tarun.nbateamviewerapp.databinding.TeamsListFragmentBinding
-import com.tarun.nbateamviewerapp.ui.TeamsSharedViewModel
+import com.tarun.nbateamviewerapp.ui.viewModels.TeamsSharedViewModel
 import com.tarun.nbateamviewerapp.ui.extensions.setVisibility
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel

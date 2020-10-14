@@ -1,4 +1,4 @@
-package com.tarun.nbateamviewerapp.ui
+package com.tarun.nbateamviewerapp.ui.viewModels
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
