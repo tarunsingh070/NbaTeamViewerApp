@@ -2,6 +2,10 @@ package com.tarun.nbateamviewerapp.ui.teamsActivity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupActionBarWithNavController
+import com.tarun.nbateamviewerapp.R
 import com.tarun.nbateamviewerapp.databinding.ActivityTeamsBinding
 import com.tarun.nbateamviewerapp.ui.viewModels.TeamsSharedViewModel
 import com.tarun.nbateamviewerapp.ui.extensions.displayLongToast
@@ -12,10 +16,18 @@ class TeamsActivity : AppCompatActivity() {
     private val viewModel: TeamsSharedViewModel by viewModel()
     private lateinit var binding: ActivityTeamsBinding
 
+    private val navController by lazy {
+        (supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as
+                NavHostFragment).navController
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTeamsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setSupportActionBar(binding.teamsActivityToolbar)
+        setupActionBarWithNavController(navController)
+
         observeLoadingState()
         observeErrorMessage()
     }
@@ -36,5 +48,12 @@ class TeamsActivity : AppCompatActivity() {
         viewModel.errorMessage.observe(this, {
             displayLongToast(it)
         })
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            android.R.id.home -> onBackPressed()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

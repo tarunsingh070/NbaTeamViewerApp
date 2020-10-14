@@ -19,7 +19,7 @@
             android:indeterminate="true"
             android:indeterminateTint="@android:color/holo_blue_dark"
             android:indeterminateTintMode="src_in"
-            android:layout_margin="8dp" />
+            android:layout_margin="8dp"/>
     </FrameLayout>
 
     <androidx.fragment.app.FragmentContainerView
@@ -27,7 +27,15 @@
         android:name="androidx.navigation.fragment.NavHostFragment"
         app:navGraph="@navigation/nba_team_viewer_graph"
         app:defaultNavHost="true"
+        android:layout_margin="8dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="16dp" />
+        android:layout_below="@id/teams_activity_toolbar"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/teams_activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 </RelativeLayout>

@@ -6,17 +6,17 @@
     <fragment
         android:id="@+id/teamsListFragment"
         android:name="com.tarun.nbateamviewerapp.ui.teamsList.TeamsListFragment"
-        android:label="TeamsListFragment" >
+        android:label="NBA Teams">
         <action
             android:id="@+id/action_teamsListFragment_to_teamDetailsFragment"
             app:destination="@id/teamDetailsFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right" />
+            app:popExitAnim="@android:anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/teamDetailsFragment"
         android:name="com.tarun.nbateamviewerapp.ui.teamDetails.TeamDetailsFragment"
-        android:label="TeamDetailsFragment" />
+        android:label="Team Details"/>
 </navigation>

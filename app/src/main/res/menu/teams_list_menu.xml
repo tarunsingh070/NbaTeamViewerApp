@@ -5,5 +5,5 @@
         android:id="@+id/teams_list_spinner"
         android:title="@string/sort_by_menu_option_title"
         app:actionViewClass="android.widget.Spinner"
-        app:showAsAction="always" />
+        app:showAsAction="always"/>
 </menu>

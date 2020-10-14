@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.tarun.nbateamviewerapp.R
 import com.tarun.nbateamviewerapp.data.model.Team
@@ -84,6 +85,7 @@ class TeamsListFragment : Fragment(), TeamsListAdapter.TeamsListAdapterListener,
         binding.teamsListRecyclerView.apply {
             adapter = teamsListAdapter
             layoutManager = LinearLayoutManager(context)
+            addItemDecoration(DividerItemDecoration(context, LinearLayoutManager.VERTICAL))
         }
     }
 

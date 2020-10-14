@@ -24,7 +24,7 @@ class TeamsSharedViewModel : ViewModel(), KoinComponent {
     private val disposables = CompositeDisposable()
 
     /**
-     * Handles the event when onViewCreated method of [TeamsListFragment] is called.
+     * Handles the event when onViewCreated method of TeamsListFragment is called.
      */
     fun onTeamsListViewCreated() {
         getTeamsList()
