@@ -24,6 +24,14 @@ class TeamsListAdapter(private val listener: TeamsListAdapterListener,
         holder.bindTo(getItem(position), listener)
     }
 
+    override fun onCurrentListChanged(
+        previousList: MutableList<Team>,
+        currentList: MutableList<Team>
+    ) {
+        super.onCurrentListChanged(previousList, currentList)
+        listener.onTeamsListChanged()
+    }
+
     /**
      * View holder class for [TeamsListAdapter]
      *
@@ -59,5 +67,10 @@ class TeamsListAdapter(private val listener: TeamsListAdapterListener,
          * Handles the event when a team from the list is clicked.
          */
         fun onTeamClicked(team: Team)
+
+        /**
+         * Notifies the event when list contents change.
+         */
+        fun onTeamsListChanged()
     }
 }

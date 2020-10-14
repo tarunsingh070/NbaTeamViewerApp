@@ -5,6 +5,12 @@
     <string name="wins_count">Wins : %d</string>
     <string name="losses_count">Losses : %d</string>
     <string name="error_fetching_teams_message">Error fetching NBA teams. Please try again later.</string>
+    <string name="sort_by_menu_option_title">Sort by</string>
+    <string-array name="team_sort_by">
+        <item>Name</item>
+        <item>Wins</item>
+        <item>Losses</item>
+    </string-array>
 
     <string name="no_results">No results :(</string>
 </resources>

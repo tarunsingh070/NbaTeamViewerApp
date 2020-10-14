@@ -64,6 +64,39 @@ class TeamsSharedViewModel : ViewModel(), KoinComponent {
     }
 
     /**
+     * Handles the event when user selects a sort by option for teams list.
+     *
+     * @param position The position of the sorting option selected.
+     */
+    fun onSortTeamByOptionClicked(position: Int) {
+        if (teamsList.value != null) {
+            teamsList.value = when (position) {
+                0 -> getTeamsListSortedByName(teamsList.value)
+                1 -> getTeamsListSortedByWins(teamsList.value)
+                2 -> getTeamsListSortedByLosses(teamsList.value)
+                else -> teamsList.value
+            }
+        }
+    }
+
+
+    /**
+     * Sorts the list provided by number of wins (descending) and returns it.
+     *
+     * @param teamsList The list to be sorted.
+     */
+    private fun getTeamsListSortedByWins(teamsList: List<Team>?): List<Team>? =
+        teamsList?.sortedByDescending { it.wins }
+
+    /**
+     * Sorts the list provided by number of losses (descending) and returns it.
+     *
+     * @param teamsList The list to be sorted.
+     */
+    private fun getTeamsListSortedByLosses(teamsList: List<Team>?): List<Team>? =
+        teamsList?.sortedByDescending { it.losses }
+
+    /**
      * Sorts the list provided in alphabetical order by name and returns it.
      *
      * @param teamsList The list to be sorted.
