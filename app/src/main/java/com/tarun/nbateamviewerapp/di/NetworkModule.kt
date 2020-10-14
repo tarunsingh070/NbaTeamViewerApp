@@ -38,7 +38,7 @@ val networkModule = module {
 
     single {
         val cacheSize = 10 * 1024 * 1024.toLong() // 10 MiB
-        Cache(File(androidContext().cacheDir, "http"), cacheSize)
+        Cache(File(androidContext().cacheDir, "http-cache"), cacheSize)
     }
 
     single { RxJava3CallAdapterFactory.createWithScheduler(Schedulers.io()) }
